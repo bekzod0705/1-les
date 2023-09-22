@@ -1,7 +1,7 @@
 from django.urls import path
-from .views import CreateApiView,ListApiView,UpdateStatus
+from .views import Create,List,UpdateStatus
 urlpatterns=[
-    path('create/',CreateApiView.as_view()),
-    path('all/',ListApiView.as_view()),
-    path('update_status/<int:news_id>/',UpdateStatus.as_view())
+    path('create/',Create.as_view()),
+    path('all/',List.as_view()),
+    path('update_status/<int:pk>/',UpdateStatus.as_view())
 ]
